@@ -1,0 +1,43 @@
+#form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    display: block;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+#form .form-control {
+    margin-bottom: 10px;
+}
+
+.semester {
+    padding: 10px 5px 10px 15px;
+    border: 1px solid #bbb;
+    margin-bottom: 10px;
+    background-color: #fedcba;
+}
+
+.subject {
+    padding: 10px 5px 10px 15px;
+    border: 1px solid #bbb;
+    margin-bottom: 10px;
+    background-color: #abcdef;
+}
+
+.mark {
+    padding: 10px 5px 10px 15px;
+    border: 1px solid #bbb;
+    margin-bottom: 10px;
+    background-color: #defabc;
+}
+
+span.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button {
+    margin-right: 20px;
+}

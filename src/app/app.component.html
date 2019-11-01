@@ -1,3 +1,26 @@
-<form [formGroup]="sampleForm">
-  
-</form>
+<div id="form">
+    <form [formGroup]="studentForm">
+      <input class="form-control"type="text" formControlName="name" placeholder="Student Name">
+      <input class="form-control"type="text" formControlName="dep" placeholder="Department">
+      <div formArrayName="semesters">
+          <div *ngFor="let semester of studentForm.get('semesters').controls; let i = index" [formGroupName]="i" class="semester">
+            <input class="form-control"type="text" formControlName="sem" placeholder="Semester">
+            <div formArrayName="subjects">
+                <div *ngFor="let subject of semester.get('subjects').controls; let j = index" [formGroupName]="j" class="subject">
+                    <input class="form-control"type="text" formControlName="subject" placeholder="Subject Name">
+                    <div formGroupName="marks" class="mark">
+                        <input class="form-control"type="text" formControlName="theory" placeholder="Theory Marks">
+                        <input class="form-control"type="text" formControlName="practical" placeholder="Practical Marks">
+                    </div>
+                </div>
+            </div> 
+            <span class="link" (click)="addSubject(i)">Add Subject</span>
+          </div>
+      </div>
+      <span class="link" (click)="addSemester()">Add Semester</span>
+    </form>
+</div>
+<div id="form">
+        <button class="btn btn-primary" (click)="loadForm()">Load Form</button>
+        <button class="btn btn-secondary" (click)="resetForm()">Reset</button>
+</div>
